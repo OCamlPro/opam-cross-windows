@@ -26,11 +26,7 @@ bug-reports: "https://github.com/dbuenzli/cmdliner/issues"
 depends: [
   "ocaml-windows" {>= "4.08.0"}
 ]
-build: [make "all" "PREFIX=%{prefix}%"]
-install: [
-  [make "install" "LIBDIR=%{_:lib}%" "DOCDIR=%{_:doc}%"]
-  [make "install-doc" "LIBDIR=%{_:lib}%" "DOCDIR=%{_:doc}%"]
-]
+build: [["dune" "build" "-p" "cmdliner" "-x" "windows"]]
 dev-repo: "git+https://erratique.ch/repos/cmdliner.git"
 url {
   src: "https://erratique.ch/software/cmdliner/releases/cmdliner-1.2.0.tbz"
