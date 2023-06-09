@@ -4,3 +4,4 @@ archives
 .tested
 depot.json
 node_modules/
+*~

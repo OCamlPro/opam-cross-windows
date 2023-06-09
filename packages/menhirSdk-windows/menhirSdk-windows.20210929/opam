@@ -16,7 +16,12 @@ depends: [
   "dune"   {build & >= "2.0.0"  }
 ]
 conflicts: [
+  "menhir" { != version  }
   "menhir-windows" { != version  }
+  "menhirLib-windows" { != version  }
+  "menhirSdk-windows" { != version  }
+  "menhirLib" { != version  }
+  "menhirSdk" { != version  }
 ]
 synopsis: "Compile-time library for auxiliary tools related to Menhir"
 url {
