@@ -11,7 +11,7 @@ dev-repo: "git+https://github.com/ocaml/Zarith.git"
 build: [
   [
     "sh" "-exc"
-    "CC=${TOOLPREF64-x86_64-w64-mingw32-}gcc ./configure --installdir %{prefix}%/windows-sysroot/lib"
+    "PATH=%{prefix}%/windows-sysroot/bin:$PATH CC=${TOOLPREF64-x86_64-w64-mingw32-}gcc ./configure --installdir %{prefix}%/windows-sysroot/lib"
 ] {os != "openbsd" & os != "freebsd" & os != "macos"}
   [
     "sh"
@@ -33,7 +33,7 @@ build: [
     "-exc"
     "LDFLAGS=\"$LDFLAGS -L/opt/homebrew/lib\" CFLAGS=\"$CFLAGS -I/opt/homebrew/include\" ./configure"
   ] {os = "macos" & os-distribution = "homebrew" & arch = "arm64" }
-  [make]
+  [ "sh" "-exc" "PATH=%{prefix}%/windows-sysroot/bin:$PATH %{make}%" ]
 ]
 install: [
   [make "install"]
