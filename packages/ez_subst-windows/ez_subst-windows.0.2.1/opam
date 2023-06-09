@@ -24,8 +24,7 @@ build: [
     "-j"
     jobs
     "@install"
-    "@runtest" {with-test}
-    "@doc" {with-doc}
+    "-x" "windows"
   ]
   ["sh" "-c" "./scripts/after.sh build '%{name}%'"]
 ]
