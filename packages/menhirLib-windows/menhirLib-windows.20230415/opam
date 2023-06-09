@@ -18,6 +18,9 @@ depends: [
 ]
 conflicts: [
   "menhir" { != version  }
+  "menhir-windows" { != version  }
+  "menhirLib-windows" { != version  }
+  "menhirSdk-windows" { != version  }
   "menhirLib" { != version  }
   "menhirSdk" { != version  }
 ]
