@@ -33,8 +33,7 @@ build: [
     "-j"
     jobs
     "@install"
-    "@doc" {with-doc}
-  "-x" "windows"
+    "-x" "windows"
   ]
 ]
 url {

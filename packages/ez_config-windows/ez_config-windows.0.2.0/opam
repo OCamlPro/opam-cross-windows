@@ -33,11 +33,9 @@ install: [
   ["sh" "-c" "./scripts/before.sh install '%{name}%'"]
 ]
 depends: [
-  "ocaml" {>= "4.07.0" & < "5.0"}
-  "ocaml-windows"
+  "ocaml-windows" {>= "4.07.0" & < "5.0"}
   "dune" {>= "2.7.0"}
-  "ez_file" {>= "0.3.0" & < "1.0.0"}
-  "ez_file-windows"
+  "ez_file-windows" {>= "0.3.0" & < "1.0.0"}
 ]
 
 url {
