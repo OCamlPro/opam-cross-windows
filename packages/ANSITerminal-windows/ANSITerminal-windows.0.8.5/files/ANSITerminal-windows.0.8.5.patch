@@ -1,0 +1,13 @@
+diff -ru ANSITerminal-windows.0.8.5-orig/src/choose_implementation.ml ANSITerminal-windows.0.8.5/src/choose_implementation.ml
+--- ANSITerminal-windows.0.8.5-orig/src/choose_implementation.ml	2022-07-19 17:59:30.000000000 +0200
++++ ANSITerminal-windows.0.8.5/src/choose_implementation.ml	2023-06-26 22:37:25.062169802 +0200
+@@ -25,8 +25,4 @@
+   copy_file "ANSITerminal_win.ml" "ANSITerminal.ml" ~line_directive:true;
+   copy_file "ANSITerminal_win_stubs.c" "ANSITerminal_stubs.c"
+ 
+-let () =
+-  match Sys.os_type with
+-  | "Unix" | "Cygwin" -> choose_unix ()
+-  | "Win32" -> choose_win()
+-  | e -> eprintf "Unknown OS type %S.\n" e
++let () = choose_win()
