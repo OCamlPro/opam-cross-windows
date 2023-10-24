@@ -32,6 +32,8 @@ build: [
   "ocaml"
   "pkg/pkg.ml"
   "build"
+  "--toolchain"
+  "windows"
   "--dev-pkg"
   "%{dev}%"
   "--with-cmdliner"
