@@ -12,7 +12,7 @@ license: "LGPL-2.0-only WITH OCaml-LGPL-linking-exception"
 x-maintenance-intent: ["(latest)"]
 patches: ["patches/use-ocamlfind-to-build.diff"]
 build: [
-  ["env" "OCAMLFIND_TOOLCHAIN=windows" "./configure" "-prefixnonocaml" conf-gcc-windows64:prefix]
+  ["env" "OCAMLFIND_TOOLCHAIN=windows" "./configure" "-prefixnonocaml" conf-gcc-windows:prefix]
   ["env" "OCAMLFIND_TOOLCHAIN=windows" make]
 ]
 install: [

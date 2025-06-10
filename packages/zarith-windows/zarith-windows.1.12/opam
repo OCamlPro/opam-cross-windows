@@ -13,7 +13,7 @@ build-env: [
 ]
 build: [
   ["env"
-   "CC=%{conf-clang-windows:cc}%"
+   "CC=%{conf-gcc-windows:cc}%"
    "INSTALL_DIR=%{prefix}%/windows-sysroot/lib"
    "OCAML_LIB_DIR=%{prefix}%/windows-sysroot/lib/ocaml"
    "sh" "-exc" "./configure --installdir $INSTALL_DIR --ocamllibdir $OCAML_LIB_DIR"]
